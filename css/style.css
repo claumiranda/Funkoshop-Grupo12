@@ -474,6 +474,16 @@ header {
     font-size: var(--font-small);
 }
 
+/* CONTACTO */
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-36);
+    font-size: var(--font-medium);
+}
+
 /* FOOTER */
 .footer {
     position: relative;
