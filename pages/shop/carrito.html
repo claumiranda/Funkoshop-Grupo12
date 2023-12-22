@@ -19,7 +19,7 @@
             <ul class="navbar__menu">
 
                 <li class="navbar__item with-submenu">
-                     <a class="navbar__link width-icon" href="../../pages/shop/shop.html">SHOP<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+                     <a class="navbar__link width-icon" href="../shop/shop.html">SHOP<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
 
                      <ul class="submenu">
                         <li class="submenu__item"><a href="submenu__link">Funkos</a></li>
@@ -29,56 +29,74 @@
                 </li>
 
                 <li>
-                    <a class="navbar__link"  href="../../pages/contacto/contacto.html">CONTACTO</a>
+                    <a class="navbar__link"  href="../admin/contacto.html">CONTACTO</a>
                 </li class="navbar__item" >
 
                 <li>
-                    <a class="navbar__link" href="../../pages/admin/login.html">LOGIN</a>
+                    <a class="navbar__link" href="../admin/login.html">LOGIN</a>
                 </li class="navbar__item" >
 
                 <li class="navbar__item">
-                    <a class="navbar__cart"  href="../../pages/cart/cart.html">
+                    <a class="navbar__cart"  href="../shop/carrito.html">
                         <img src="../../img/icons/cart-icon.svg" alt="ícono carrito">
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
-
-        <main>    
-            <h1>CARRITO DE COMPRAS</h1>
-            <p>DETALLE DEL PRODUCTO</p>
-            <p>CANTIDAD</p>
-            <p>TOTAL</p>
-
-            <!--opciones de compra  -->
-            <section>
-                <picture>
-                    <img src="../../img/star-wars/baby-yoda-1.webp"
-                        alt="Figura coleccionable Funko de Grogu de la serie de Mandalorian">
+     <!-- MAIN -->
+     <main class="carro container">
+        <h1 class="carro__title">CARRITO DE COMPRAS</h1>
+        <ul class="carro__col">
+            <li>DETALLE DE PRODUCTO</li>
+            <li>CANTIDAD</li>
+            <li>TOTAL</li>
+        </ul>
+        <article class="carro__card">
+            <div class="carro__card-content">
+                <picture class="carro__card-img">
+                    <img src="../../img/star-wars/baby-yoda-1.webp" alt="BABY YODA BLUEBALL" />
                 </picture>
-                <article>
-                    <h3>BABY YODA BLUEBALL</h3>
-                    <p>STAR WARS</p>
-                    <p>precio: $ 1799,99</p>
-                    <a href="">
-                    </a>
-                </article>
-            </section>
-            
-            <!-- Formulario de cantidad y precio de productos a comprar-->
-            <h2>RESUMEN</h2>
-
-            <p>CANTIDAD DE ELEMENTOS</p>
-            <p>SUBTOTAL</p>
-            <p>ENVIO</p>
-            <p>TOTAL</p>
-
-            <a href=""><button name="button">IR A PAGAR</button>
-            </a>
-
-            </main>
-
+                <div class="carro__card-desc">
+                    <h4 class="card-item__title">BABY YODA BLUEBALL</h4>
+                    <p class="card-item__category">STAR WARS</p>
+                    <p class="card-item__price">precio: $1799,99</p>
+                </div>
+            </div>
+            <div class="carro__card-quantity">
+                <input type="number" class="quantity" id="quantity" value="0">
+                <button id="add" class="increment">+</button>
+                <button id="subtract" class="decrement">-</button>
+            </div>
+            <div class="carro__card-total">
+                <p>$ 3599,98</p>
+                <button class="carro__card-cancel">x</button>
+            </div>
+        </article>
+        <section class="carro__resumen">
+            <h2 class="carro__resumen-title">RESUMEN</h2>
+            <div class="carro__resumen-items">
+                <div class="carro__resumen-item">
+                    <p>CANTIDAD DE ELEMENTOS</p>
+                    <p>1</p>
+                </div>
+                <div class="carro__resumen-item">
+                    <p>SUBTOTAL</p>
+                    <p>$ 5399,97</p>
+                </div>
+                <div class="carro__resumen-item">
+                    <p>ENVIO</p>
+                    <p>$ 0,00</p>
+                </div>
+                <div class="carro__resumen-item carro__resumen-total">
+                    <p>TOTAL</p>
+                    <p>$ 5399,97</p>
+                </div>
+            </div>
+            <button class="ir-a-pagar"><span>IR A PAGAR</span></button>
+        </section>
+    </main>
+    <!-- FIN MAIN -->
             <footer>
                 <section>
                     <nav>
@@ -89,15 +107,15 @@
                         <ul class="navbar__item">
                             <!-- Barra de navegación -->
                             <li class="navbar__item">
-                                <a class="navbar__link" href="../../pages/shop/shop.html">SHOP</a>
+                                <a class="navbar__link" href="../shop/shop.html">SHOP</a>
                             </li>
                 
                             <li class="navbar__item">
-                                <a class="navbar__link" href="../../pages/admin/login.html">INGRESAR</a>
+                                <a class="navbar__link" href="../admin/login.html">INGRESAR</a>
                             </li>
                 
                             <li class="navbar__item">
-                                <a class="navbar__link" href="../../pages/contact.html">CONTACTO</a>
+                                <a class="navbar__link" href="../admin/contacto.html">CONTACTO</a>
                             </li>
                         </ul>
                 
@@ -112,5 +130,8 @@
                     <p class="footer__copy">All rigth reserved 2023 - Funkoshop &copy; </p>
                 </footer>
                 <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
+                <script src="../../js/item.js"></script>
+                
 </body>
 </html>
