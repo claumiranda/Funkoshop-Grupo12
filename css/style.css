@@ -999,6 +999,19 @@ header {
     max-width: 6em;
   }
 
+  /* EDIT */
+  .desc-input {
+    width: 80em;
+    height: 15em;
+    top: 40em;
+    left: 10em;
+    border-radius: 4px;
+  }
+
+  .img-edit {
+    
+  }
+
 /* LOGIN */
 .mainlogin {
     padding-top: 5em;

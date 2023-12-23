@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-     <!-- Primera sección: Header -->
+     <!-- Header -->
      <header>
         <nav class="navbar container">
             <picture class="navbar__logo">
@@ -18,11 +18,11 @@
             <ul class="navbar__menu">
 
                 <li>
-                    <a class="navbar__link" href="../../pages/shop/shop.html">VER TIENDA</a>
+                    <a class="navbar__link" href="../shop/shop.html">VER TIENDA</a>
                 </li class="navbar__item" >
 
                 <li>
-                    <a class="navbar__link"  href="../../pages/admin/admin.html">ADMIN</a>
+                    <a class="navbar__link"  href="../admin/admin.html">ADMIN</a>
                 </li class="navbar__item" >
 
                 <li>
@@ -33,66 +33,90 @@
         </nav>
     </header>
 
-    <!-- segunda sección: main -->
+    <!-- MAIN -->
     <main>
-        <h1>EDITAR ITEM</h1>
-    
-        <section>
-            <p>Categoría:
-                <input type="" name="" placeholder="Figuras">
-            </p>
-    
-            <p>Licencia:
-                <input type="" name="" placeholder="Naruto Shippuden">
-            </p>
-        </section>
-    
-        <p>Nombre del producto: <u>
-                Kakashi Hatake Shippuden Saga</u></p>
-        
-        <!-- textarea -->
-        <section>
-            <textarea name="" id="" cols="30"
-                rows="10">Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shipudden invocando chidori.</textarea>
-        </section>
-        
-        <section>
-            <p>SKU: </p>
-            <p>Precio: </p>
-            <p>Stock: </p>
-        </section>
-
-        <section>
-            <p>Descuento:</p>
-            <p>Cuotas:
-                <input type="" name="" placeholder="6 cuotas sin interés">
-            </p>
-        </section>
-
-        <section>
-            <p>Imágenes:  <button>Elegir archivos:</button> No se ha seleccionado ningún archivo</p>
-
-            <p><u>Frente</u> <u>Dorso</u></p>
-            
-            <button>Modificar Producto</button>
-        </section>
+        <form class="container">
+            <div class="create-grid">
+                <div class="create-row">
+                    <h1 class="create-title">EDITAR ITEM</h1>
+                </div>
+                <div class="create-row">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="opcion1">Figuras</option>
+                        <option value="opcion2">Opción 1</option>
+                        <option value="opcion3">Opción 2</option>
+                    </select>
+                    <label for="licencia">Licencia:</label>
+                    <select id="licencia" name="licencia">
+                        <option value="opcion1">Naruto Shippuden</option>
+                        <option value="opcion2">Opción 1</option>
+                        <option value="opcion3">Opción 2</option>
+                    </select>
+                </div>
+                <div class="create-row">
+                    <label for="nombre">Nombre del producto:</label>
+                    <input class="log-input" type="text" id="nombre" name="nombre" placeholder="Kakashi Hatake Shippuden Saga">
+                </div>
+                <div class="create-row">
+                    <input class="desc-input" type="text" id="descripcion" name="descripcion"
+                        placeholder="Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shipudden invocando chidori.">
+                </div>
+                <div class="create-row">
+                    <label for="sku">SKU:</label>
+                    <input class="create-input log-input" type="text" id="sku" name="sku" placeholder="NAR001012">
+                    <label for="precio">Precio:</label>
+                    <input class="create-input log-input" type="text" id="precio" name="precio" placeholder="$ 1.799,00">
+                    <label for="stock">Stock:</label>
+                    <input class="create-input log-input" type="text" id="stock" name="stock" placeholder=" 10 ">
+                </div>
+                <div class="create-row">
+                    <label for="descuento">Descuento:</label>
+                    <input class="create-input log-input" type="text" id="descuento" name="descuento" placeholder="10%">
+                    <label for="cuotas">Cuotas:</label>
+                    <select id="cuotas" name="cuotas">
+                        <option value="opcion1">3 Cuotas sin interés</option>
+                        <option value="opcion2">6 Cuotas</option>
+                        <option value="opcion3">12 Cuotas</option>
+                    </select>
+                </div>
+                <div class="create-row">
+                    <label for="imagenes">Imágenes:</label>
+                    <input type="file" id="imagenes" name="imagenes">
+                </div>
+                <picture class="create-row">
+                    <figure class="img-edit">
+                        <img src="../../img/naruto/kakashi_hatake.jpg"
+                            alt="Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shipudden">
+                        <figcaption>Muñeco</figcaption>
+                    </figure>
+                    <figure class="img-edit">
+                        <img src="../../img/naruto/Kakashi_hatake_box.jpg" alt="Box de Kakashi Hatake">
+                        <figcaption>Box</figcaption>
+                    </figure>
+                </picture>
+                <div class="create-row">
+                    <button class="btn-ingresar" type="submit" id="agregar">Modificar Producto</button>
+                </div>
+            </div>
+        </form>
         </main>
 
-    <!-- tercer sección: footer -->
+    <!-- FOOTER -->
     <footer class="footer">
         <nav class="navbar container">
             <ul class="navbar__item">
                 <!-- Barra de navegación -->
                 <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/shop/shop.html">SHOP</a>
+                    <a class="navbar__link" href="../shop/shop.html">SHOP</a>
                 </li>
     
                 <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/admin/login.html">INGRESAR</a>
+                    <a class="navbar__link" href="../admin/login.html">INGRESAR</a>
                 </li>
     
                 <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/contact.html">CONTACTO</a>
+                    <a class="navbar__link" href="../admin/contacto.html">CONTACTO</a>
                 </li>
             </ul>
     
