@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create | Funkoshop</title>
+    <title>Create</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 
-    <!-- Primera sección: Header -->
+    <!-- Header -->
     <header>
         <nav class="navbar container">
             <picture class="navbar__logo">
@@ -19,11 +19,11 @@
             <ul class="navbar__menu">
 
                 <li>
-                    <a class="navbar__link" href="../../pages/shop/shop.html">VER TIENDA</a>
+                    <a class="navbar__link" href="../shop/shop.html">VER TIENDA</a>
                 </li class="navbar__item" >
 
                 <li>
-                    <a class="navbar__link"  href="../../pages/admin/admin.html">ADMIN</a>
+                    <a class="navbar__link"  href="../admin/admin.html">ADMIN</a>
                 </li class="navbar__item" >
 
                 <li>
@@ -34,105 +34,83 @@
         </nav>
     </header>
 
-    <main> <!--Inicio Main-->
-        <section>
-            <h2>CREAR NUEVO ITEM</h2>
-
-            <form action="">
-                <div>
-                    <div>
-                        <label for="categoria">Categoría: </label>
-                        <select id="categoria">
-                            <option hidden selected>Seleccionar</option>
-                            <option value="cat-1">Categoría 1</option>
-                            <option value="cat-2">Categoría 2</option>
-                            <option value="cat-3">Categoría 3</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="licencia">Licencia: </label>
-                        <select id="licencia">
-                            <option hidden selected>Seleccionar</option>
-                            <option value="lic-1">Licencia 1</option>
-                            <option value="lic-2">Licencia 2</option>
-                            <option value="lic-3">Licencia 3</option>
-                        </select>
-                    </div>
+    <main> 
+        <!--Inicio Main-->
+        <form class="main-create container">
+            <div class="create-grid">
+                <div class="create-row">
+                    <h1 class="create-title">CREAR NUEVO ITEM</h1>
                 </div>
-
-                <div>
-                    <label for="nombre_producto">Nombre del producto: </label>
-                    <input type="text" id="nombre_producto" placeholder="Kakashi Hatake Shippuden Saga">
+                <div class="create-row">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="opcion1">Seleccionar</option>
+                        <option value="opcion2">Opción 1</option>
+                        <option value="opcion3">Opción 2</option>
+                    </select>
+                    <label for="licencia">Licencia:</label>
+                    <select id="licencia" name="licencia">
+                        <option value="opcion1">Seleccionar</option>
+                        <option value="opcion2">Opción 1</option>
+                        <option value="opcion3">Opción 2</option>
+                    </select>
                 </div>
-
-                <textarea rows="10" cols="50" placeholder="Escriba su mensaje aqui..."></textarea>
-
-                <div>
-                    <div>
-                        <label for="sku">SKU: </label>
-                        <input id="sku" type="text" placeholder="SSK111AB001">
-                    </div>
-
-                    <div>
-                        <label for="precio">Precio: </label>
-                        <input id="precio" type="text" placeholder="$ 0.000,00">
-                    </div>
-
-                    <div>
-                        <label for="stock">Stock: </label>
-                        <input id="stock" type="text" placeholder="0">
-                    </div>
+                <div class="create-row">
+                    <label for="nombre">Nombre del producto:</label>
+                    <input class="log-input" type="text" id="nombre" name="nombre" placeholder="Kakashi Hatake Shippuden Saga">
                 </div>
-
-                <div>
-                    <div>
-                        <label for="descuento">Descuento: </label>
-                        <input id="descuento" type="text" placeholder="0%">
-                    </div>
-
-                    <div>
-                        <label for="cuotas">Cuotas: </label>
-                        <select id="cuotas">
-                            <option value="3">3 Cuotas sin interés</option>
-                            <option value="6">6 Cuotas sin interés</option>
-                            <option value="12">12 Cuotas sin interés</option>
-                        </select>
-                    </div>
+                <div class="create-row">
+                        <textarea name="textarea" rows="10" cols="50">Descripción del producto</textarea>
                 </div>
-
-                <div>
-                    <label for="imagenes">Imágenes: </label>
-                    <input id="imagenes" type="file">
+                <div class="create-row">
+                    <label for="sku">SKU:</label>
+                    <input class="create-input log-input" type="text" id="sku" name="sku" placeholder="SSK111AB001">
+                    <label for="precio">Precio:</label>
+                    <input class="create-input log-input" type="text" id="precio" name="precio" placeholder="$ 0.000,00">
+                    <label for="stock">Stock:</label>
+                    <input class="create-input log-input" type="text" id="stock" name="stock" placeholder=" 0 ">
                 </div>
-
-                <div>
-                    <button>Agregar Producto</button>
-                    <button>Limpiar</button>
+                <div class="create-row">
+                    <label for="descuento">Descuento:</label>
+                    <input class="create-input log-input" type="text" id="descuento" name="descuento" placeholder="0%">
+                    <label for="cuotas">Cuotas:</label>
+                    <select id="cuotas" name="cuotas">
+                        <option value="opcion1">3 Cuotas sin interés</option>
+                        <option value="opcion2">6 Cuotas</option>
+                        <option value="opcion3">12 Cuotas</option>
+                    </select>
                 </div>
+                <div class="create-row">
+                    <label for="imagenes">Imágenes:</label>
+                    <input type="file" id="imagenes" name="imagenes">
+                </div>
+                <div class="create-row">
+                    <button class="btn-ingresar" type="submit" id="agregar">Agregar Producto</button>
+                    <button class="btn-ingresar" type="reset" id="limpiar">Limpiar</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <!--Fin Main-->
 
-            </form>
-        </section>
-    </main><!--Fin Main-->
-
-    <!-- Quinta sección: Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <nav class="navbar container">
             <ul class="navbar__items">
                 <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/shop/shop.html">SHOP</a>
+                    <a class="navbar__link" href="../shop/shop.html">SHOP</a>
                 </li>
 
                 <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/admin/register.html">REGISTRARSE</a>
+                    <a class="navbar__link" href="../admin/register.html">REGISTRARSE</a>
                 </li>
 
                 <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/admin/login.html">INGRESAR</a>
+                    <a class="navbar__link" href="../admin/login.html">INGRESAR</a>
                 </li>
 
                 <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/admin/contact.html">CONTACTO</a>
+                    <a class="navbar__link" href="../admin/contacto.html">CONTACTO</a>
                 </li>
             </ul>
 
@@ -145,7 +123,7 @@
         <p class="footer__copy">
             All rights reserved 2023 - Funkoshop &copy;
         </p>
-    </footer><!--Fin Footer-->
+    </footer>
+    <!--Fin Footer-->
 </body>
-
 </html>
