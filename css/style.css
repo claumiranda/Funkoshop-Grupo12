@@ -598,12 +598,13 @@ header {
     padding-top: 10rem;
     margin-bottom: 10rem;
     font-family: var(--alternative-font);
+    
   }
   
   .carro__title {
     display: flex;
     font-size: var(--font-jumbo);
-    border-bottom: 3px solid var(--primary-solid);
+    border-bottom: 5px solid var(--primary-solid);
     width: fit-content;
     height: fit-content;
     margin-bottom: var(--spacing-12);
@@ -619,6 +620,7 @@ header {
     font-size: var(--font-small);
     font-weight: 700;
     border: 1px solid var(--secondary-300);
+    border-radius: 10px;
     padding: var(--spacing-12);
   }
   
@@ -630,6 +632,7 @@ header {
     align-items: center;
     justify-items: start;
     border: 1px solid var(--secondary-300);
+    border-radius: 25px;
     padding: var(--spacing-12);
   }
   
@@ -637,6 +640,7 @@ header {
     display: flex;
     gap: var(--spacing-12);
     align-items: center;
+    
   }
   
   .carro__card-img {
@@ -675,22 +679,22 @@ header {
   .increment {
     grid-row: 1;
     background-color: var(--primary-900);
-    color: var(--light-font-solid);
+    color: var(--ligth-font-solid);
     padding: var(--spacing-8);
   }
   
   .decrement {
     grid-row: 2;
     background-color: var(--primary-900);
-    color: var(--light-font-solid);
+    color: var(--ligth-font-solid);
     padding: var(--spacing-8);
   }
   
   .carro__card-total {
     display: flex;
-    justify-self: right;
+    justify-self: center;
     align-items: center;
-    gap: 5rem;
+    gap: 5rem; 
   }
   
   .carro__card-cancel {
@@ -700,7 +704,7 @@ header {
     padding: var(--spacing-8);
     color: var(--primary-solid);
     font-weight: bold;
-    font-size: var(--font-medium);
+    font-size: var(--font-large);
     max-width: 3rem;
     max-height: 3rem;
     border-color: var(--primary-solid);
@@ -721,7 +725,7 @@ header {
   .carro__resumen-title {
     display: flex;
     justify-self: right;
-    border-bottom: 3px solid var(--primary-solid);
+    border-bottom: 5px solid var(--primary-solid);
     font-size: var(--font-jumbo);
     height: fit-content;
     padding: 0;
@@ -732,6 +736,7 @@ header {
     grid-template-rows: repeat(4, 1fr);
     gap: var(--spacing-12);
     border: 1px solid var(--secondary-300);
+    border-radius: 10px;
     padding: var(--spacing-16);
   }
   
@@ -763,6 +768,12 @@ header {
     cursor: pointer;
     outline: none;
     position: relative;
+    margin-top: 35px;
+  }
+
+  .ir-a-pagar {
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
   
   .ir-a-pagar::before {
